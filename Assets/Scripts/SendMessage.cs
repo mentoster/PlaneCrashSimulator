@@ -9,6 +9,7 @@ public class SendMessage : MonoBehaviour
     private FutuRiftController controller2;
     private float pitch = 0;
     private float roll = 0;
+    public TestUDP TU;
     [Space(10)]
     [Header("Connection settings")]
     public int port = 7000;
@@ -38,20 +39,13 @@ public class SendMessage : MonoBehaviour
         {
             Pitch = pitch,
             Roll = roll
-        };//
-        controller2 = new FutuRiftController(port2, IPAddress.Parse(ip))
-        {
-            Pitch = pitch,
-            Roll = roll
-        };//
+        };
         controller.Start();
-        controller2.Start();//
         StartCoroutine("Strt");
     }
 
     private void OnApplicationQuit()
     {
-        controller2.Stop();//
         controller.Stop();
     }
 
@@ -67,14 +61,14 @@ public class SendMessage : MonoBehaviour
     IEnumerator Pitch()
     {
         controller.Pitch = controller.Pitch - PitchShake;
-        controller2.Pitch = controller.Pitch - PitchShake;//
+        TU.LeanForwardNBack(controller.Pitch - PitchShake);
         yield return new WaitForSeconds(ShakeTick);
         controller.Pitch = controller.Pitch + PitchShake;
-        controller2.Pitch = controller.Pitch + PitchShake;//
+        TU.LeanForwardNBack(controller.Pitch - PitchShake);
         while (pitch < 21)
         {
             controller.Pitch = controller.Pitch + PitchPerTick;
-            controller2.Pitch = controller.Pitch + PitchPerTick;//
+            TU.LeanForwardNBack(controller.Pitch - PitchShake);
             pitch = controller.Pitch;
             yield return new WaitForSeconds(PitchTick);
         }
@@ -85,14 +79,14 @@ public class SendMessage : MonoBehaviour
         while(roll < 18)
         {
             controller.Roll = controller.Roll + RollPerTick;
-            controller2.Roll = controller.Roll + RollPerTick;//
+            TU.LeanRightNLeft(controller.Roll + RollPerTick);
             roll = controller.Roll;
             yield return new WaitForSeconds(RollLeftTick);
         }
         while (roll > -18)
         {
             controller.Roll = controller.Roll - RollPerTick;
-            controller2.Roll = controller.Roll - RollPerTick;//
+            TU.LeanRightNLeft(controller.Roll + RollPerTick);
             roll = controller.Roll;
             yield return new WaitForSeconds(RollRightTick);
         }
@@ -103,15 +97,15 @@ public class SendMessage : MonoBehaviour
         while (true)
         {
             controller.Roll = controller.Roll + RollPerTickShake;
-            controller2.Roll = controller.Roll + RollPerTickShake;//
+            TU.LeanRightNLeft(controller.Roll + RollPerTick);
             yield return new WaitForSeconds(ShakeInterval);
             controller.Roll = controller.Roll - RollPerTickShake;
             controller.Pitch = controller.Pitch - PitchPerTickShake;
-            controller2.Roll = controller.Roll - RollPerTickShake;//
-            controller2.Pitch = controller.Pitch - PitchPerTickShake;//
+            TU.LeanRightNLeft(controller.Roll + RollPerTick);
+            TU.LeanForwardNBack(controller.Pitch - PitchShake);
             yield return new WaitForSeconds(ShakeInterval);
             controller.Pitch = controller.Pitch + PitchPerTickShake;
-            controller2.Pitch = controller.Pitch + PitchPerTickShake;//
+            TU.LeanForwardNBack(controller.Pitch - PitchShake);
         }
     }
 }
