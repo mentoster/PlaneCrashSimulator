@@ -6,14 +6,12 @@ using System.Collections;
 public class SendMessage : MonoBehaviour
 {
     private FutuRiftController controller;
-    private FutuRiftController controller2;
     private float pitch = 0;
     private float roll = 0;
     public TestUDP TU;
     [Space(10)]
     [Header("Connection settings")]
     public int port = 7000;
-    private int port2 = 7001;
     public string ip = "192.168.1.255";
     [Space(10)]
     [Header("Start settings")]
