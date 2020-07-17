@@ -30,6 +30,13 @@ public class SendMessage : MonoBehaviour
     [Range(0.1f, 1f)] public float RollPerTickShake = 0.25f;
     [Range(0.1f, 1f)] public float PitchPerTickShake = 0.3f;
     [Range(0.01f, 0.1f)] public float ShakeInterval = 0.025f;
+    [Header("Animated parts")]
+    public GameObject LeftTurbine;
+    public GameObject RightTurbine;
+    public GameObject RightBaggage;
+    public GameObject LeftBaggage;
+    public GameObject Tale;
+
 
     void Start()
     {
@@ -51,6 +58,9 @@ public class SendMessage : MonoBehaviour
     {
         Debug.Log("Start");
         yield return new WaitForSeconds(TimeToStart);
+        LeftTurbine.GetComponent<Animator>().enabled = true;
+        LeftTurbine.GetComponent<DestroyAfterSomeTime>().enabled = true;
+        RightBaggage.GetComponent<Animator>().enabled = true;
         StartCoroutine("Pitch");
         StartCoroutine("Roll");
         StartCoroutine("Shake");
@@ -74,6 +84,7 @@ public class SendMessage : MonoBehaviour
 
     IEnumerator Roll()
     {
+        bool check = true;
         while(roll < 18)
         {
             controller.Roll = controller.Roll + RollPerTick;
@@ -81,8 +92,19 @@ public class SendMessage : MonoBehaviour
             roll = controller.Roll;
             yield return new WaitForSeconds(RollLeftTick);
         }
+        RightTurbine.GetComponent<Animator>().enabled = true;
+        RightTurbine.GetComponent<DestroyAfterSomeTime>().enabled = true;
         while (roll > -18)
         {
+            if (roll < 0 && check)
+            {
+                Tale.GetComponent<Animator>().enabled = true;
+                Tale.GetComponent<DestroyAfterSomeTime>().enabled = true;
+                controller.Roll = controller.Roll - RollPerTick * 2;
+                TU.LeanRightNLeft(controller.Roll + RollPerTick * 2);
+                LeftBaggage.GetComponent<Animator>().enabled = true;
+                check = false;
+            }
             controller.Roll = controller.Roll - RollPerTick;
             TU.LeanRightNLeft(controller.Roll + RollPerTick);
             roll = controller.Roll;

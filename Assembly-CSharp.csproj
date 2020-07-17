@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\ChairControl\Extensions\IComparableExtensions.cs" />
     <Compile Include="Assets\Scripts\ChairControl\Properties\AssemblyInfo.cs" />
     <Compile Include="Assets\Scripts\ChairControl\SimpleChairControl.cs" />
+    <Compile Include="Assets\Scripts\DestroyAfterSomeTime.cs" />
     <Compile Include="Assets\Scripts\SendMessage.cs" />
     <Compile Include="Assets\Scripts\TestUDP.cs" />
     <None Include="Assets\Scripts\ChairControl\OutFilePath.txt" />
