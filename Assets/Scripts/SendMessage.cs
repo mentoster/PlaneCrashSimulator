@@ -36,6 +36,9 @@ public class SendMessage : MonoBehaviour
     public GameObject RightBaggage;
     public GameObject LeftBaggage;
     public GameObject Tale;
+    public GameObject LeftChairs;
+    public GameObject LeftChair;
+    public GameObject RightChair;
 
 
     void Start()
@@ -100,6 +103,11 @@ public class SendMessage : MonoBehaviour
             {
                 Tale.GetComponent<Animator>().enabled = true;
                 Tale.GetComponent<DestroyAfterSomeTime>().enabled = true;
+                yield return new WaitForSeconds(1);
+                LeftChairs.GetComponent<Animator>().enabled = true;
+                LeftChair.GetComponent<DestroyAfterSomeTime>().enabled = true;
+                RightChair.GetComponent<Animator>().enabled = true;
+                RightChair.GetComponent<DestroyAfterSomeTime>().enabled = true;
                 controller.Roll = controller.Roll - RollPerTick * 2;
                 TU.LeanRightNLeft(controller.Roll + RollPerTick * 2);
                 LeftBaggage.GetComponent<Animator>().enabled = true;
