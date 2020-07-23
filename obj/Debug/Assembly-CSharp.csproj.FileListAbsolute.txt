@@ -1,2 +1,0 @@
-C:\Users\dakfa\Desktop\st\unity\TestUDP\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
-C:\Users\dakfa\Desktop\st\unity\TestUDP\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
