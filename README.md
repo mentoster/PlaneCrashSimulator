@@ -3,4 +3,4 @@
 
 — Unity 2018.3.12f1
 
-— Visual Studio 2017
+— Visual Studio 2019
