@@ -39,6 +39,7 @@ public class SendMessage : MonoBehaviour
     public GameObject LeftChairs;
     public GameObject LeftChair;
     public GameObject RightChair;
+    public SoundController sc;
 
 
     void Start()
@@ -61,6 +62,7 @@ public class SendMessage : MonoBehaviour
     {
         Debug.Log("Start");
         yield return new WaitForSeconds(TimeToStart);
+        sc.PlaySeatBelt();
         LeftTurbine.GetComponent<Animator>().enabled = true;
         LeftTurbine.GetComponent<DestroyAfterSomeTime>().enabled = true;
         RightBaggage.GetComponent<Animator>().enabled = true;
