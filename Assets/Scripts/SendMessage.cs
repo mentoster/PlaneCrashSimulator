@@ -49,6 +49,10 @@ public class SendMessage : MonoBehaviour
             Pitch = pitch,
             Roll = roll
         };
+    }
+
+    public void Activate()
+    {
         controller.Start();
         StartCoroutine("Strt");
     }
