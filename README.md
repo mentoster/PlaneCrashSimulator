@@ -1,6 +1,6 @@
 # PlainCrashSimulator
 ПО необходимое для работы с проектом:
 
-— Unity 2018.3.12f1
+— Unity 2019.4.1f1
 
 — Visual Studio 2019
