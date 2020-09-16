@@ -19533,7 +19533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 673201765}
-  Map: {fileID: 0}
+  Map: {fileID: 1251959086}
   Places:
   - {fileID: 207762972}
   - {fileID: 280923147}
