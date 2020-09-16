@@ -1,41 +1,57 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ChoosePlace : MonoBehaviour
 {
-    public List<GameObject> Places;
+    public GameObject Player;
+    public GameObject Map;
+    public List<Transform> Places;
     public SendMessage Plane;
-    public GameObject Camera;
+    bool onPlace = false;
 
     void Update()
     {
-        if (Places[0].activeInHierarchy == false && Places[1].activeInHierarchy == false && Places[2].activeInHierarchy == false && Places[3].activeInHierarchy == false)
+        if (!onPlace)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                Camera.SetActive(false);
-                Places[0].SetActive(true);
+                Player.transform.position = Places[0].transform.position;
                 Plane.Activate();
+                Map.SetActive(false);
+                onPlace = true;
             }
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                Camera.SetActive(false);
-                Places[1].SetActive(true);
+                Player.transform.position = Places[1].transform.position; 
                 Plane.Activate();
+                Map.SetActive(false);
+                onPlace = true;
             }
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-                Camera.SetActive(false);
-                Places[2].SetActive(true);
+                Player.transform.position = Places[2].transform.position; 
                 Plane.Activate();
+                Map.SetActive(false);
+                onPlace = true;
             }
             if (Input.GetKeyDown(KeyCode.Alpha4))
             {
-                Camera.SetActive(false);
-                Places[3].SetActive(true);
+                Player.transform.position = Places[3].transform.position;
                 Plane.Activate();
+                Map.SetActive(false);
+                onPlace = true;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Restart();
+        }
+    }
+
+    void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
