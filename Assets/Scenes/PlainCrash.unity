@@ -729,7 +729,7 @@ Transform:
   - {fileID: 673201766}
   - {fileID: 1251959087}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &160676207
 AudioSource:
@@ -6903,89 +6903,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!1 &534669902
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 534669905}
-  - component: {fileID: 534669904}
-  - component: {fileID: 534669903}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!81 &534669903
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
---- !u!20 &534669904
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &534669905
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0.097120084, y: 0.64073986, z: -0.11413438, w: 0.7529897}
-  m_LocalPosition: {x: -222.5, y: 110.4, z: -36.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 17.009, y: 80.366005, z: -2.8430002}
 --- !u!4 &571224011 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6784966850423273775, guid: 2d3a05c7830db304c9e26c1e10881924,
@@ -10456,7 +10373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1351509346}
   m_Layer: 0
-  m_Name: Fire_A (1)
+  m_Name: Fire_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19412,6 +19329,10 @@ MonoBehaviour:
   LeftChair: {fileID: 1460265458}
   RightChair: {fileID: 1795580195}
   sc: {fileID: 160676208}
+  Fire_R: {fileID: 1351509345}
+  Fire_L: {fileID: 3979010260615780033}
+  Smoke_R: {fileID: 1642320381977878}
+  Smoke_L: {fileID: 1642321356796116}
 --- !u!4 &2126113104
 Transform:
   m_ObjectHideFlags: 0
@@ -19424,7 +19345,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2126113105
 MonoBehaviour:
@@ -19492,7 +19413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4105057917153810}
   m_Layer: 0
-  m_Name: smoke_thick
+  m_Name: smoke_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19508,7 +19429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4105058757289936}
   m_Layer: 0
-  m_Name: smoke_thick (1)
+  m_Name: smoke_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38639,7 +38560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3975568361170866779}
   m_Layer: 0
-  m_Name: Fire_A
+  m_Name: Fire_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

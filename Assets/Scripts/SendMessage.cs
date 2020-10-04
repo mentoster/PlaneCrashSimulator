@@ -40,6 +40,11 @@ public class SendMessage : MonoBehaviour
     public GameObject LeftChair;
     public GameObject RightChair;
     public SoundController sc;
+    [Header("Fire and Smoke")]
+    public GameObject Fire_R;
+    public GameObject Fire_L;
+    public GameObject Smoke_R;
+    public GameObject Smoke_L;
 
 
     void Start()
@@ -67,9 +72,7 @@ public class SendMessage : MonoBehaviour
         Debug.Log("Start");
         yield return new WaitForSeconds(TimeToStart);
         sc.PlaySeatBelt();
-        LeftTurbine.GetComponent<Animator>().enabled = true;
-        LeftTurbine.GetComponent<DestroyAfterSomeTime>().enabled = true;
-        RightBaggage.GetComponent<Animator>().enabled = true;
+        StartCoroutine("Tourbine_L");
         StartCoroutine("Pitch");
         StartCoroutine("Roll");
         StartCoroutine("Shake");
@@ -94,15 +97,14 @@ public class SendMessage : MonoBehaviour
     IEnumerator Roll()
     {
         bool check = true;
-        while(roll < 18)
+        while (roll < 18)
         {
             controller.Roll = controller.Roll + RollPerTick;
             TU.LeanRightNLeft(controller.Roll + RollPerTick);
             roll = controller.Roll;
             yield return new WaitForSeconds(RollLeftTick);
         }
-        RightTurbine.GetComponent<Animator>().enabled = true;
-        RightTurbine.GetComponent<DestroyAfterSomeTime>().enabled = true;
+        StartCoroutine("Tourbine_R");
         while (roll > -18)
         {
             if (roll < 0 && check)
@@ -141,5 +143,26 @@ public class SendMessage : MonoBehaviour
             controller.Pitch = controller.Pitch + PitchPerTickShake;
             TU.LeanForwardNBack(controller.Pitch - PitchShake);
         }
+    }
+
+    IEnumerator Tourbine_L()
+    {
+        Smoke_L.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        Fire_L.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        LeftTurbine.GetComponent<Animator>().enabled = true;
+        LeftTurbine.GetComponent<DestroyAfterSomeTime>().enabled = true;
+        RightBaggage.GetComponent<Animator>().enabled = true;
+    }
+
+    IEnumerator Tourbine_R()
+    {
+        Smoke_R.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        Fire_R.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        RightTurbine.GetComponent<Animator>().enabled = true;
+        RightTurbine.GetComponent<DestroyAfterSomeTime>().enabled = true;
     }
 }

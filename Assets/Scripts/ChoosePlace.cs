@@ -23,14 +23,14 @@ public class ChoosePlace : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                Player.transform.position = Places[1].transform.position; 
+                Player.transform.position = Places[1].transform.position;
                 Plane.Activate();
                 Map.SetActive(false);
                 onPlace = true;
             }
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-                Player.transform.position = Places[2].transform.position; 
+                Player.transform.position = Places[2].transform.position;
                 Plane.Activate();
                 Map.SetActive(false);
                 onPlace = true;
