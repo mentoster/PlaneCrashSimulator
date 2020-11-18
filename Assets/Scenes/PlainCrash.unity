@@ -131,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 6784966850422777103, guid: 2d3a05c7830db304c9e26c1e10881924,
         type: 3}
       propertyPath: m_Name
-      value: Oblomok (5)
+      value: Chip (3)
       objectReference: {fileID: 0}
     - target: {fileID: 6784966850423273775, guid: 2d3a05c7830db304c9e26c1e10881924,
         type: 3}
@@ -171,7 +171,7 @@ PrefabInstance:
     - target: {fileID: 6784966850423273775, guid: 2d3a05c7830db304c9e26c1e10881924,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6784966850423273775, guid: 2d3a05c7830db304c9e26c1e10881924,
         type: 3}
@@ -298,7 +298,7 @@ PrefabInstance:
     - target: {fileID: 6784966850422777103, guid: 2d3a05c7830db304c9e26c1e10881924,
         type: 3}
       propertyPath: m_Name
-      value: Oblomok (6)
+      value: Chip (6)
       objectReference: {fileID: 0}
     - target: {fileID: 6784966850423273775, guid: 2d3a05c7830db304c9e26c1e10881924,
         type: 3}
@@ -382,7 +382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 56931736}
   m_Layer: 0
-  m_Name: Polka_l
+  m_Name: LeftShelves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -567,7 +567,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: RightScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -641,7 +641,6 @@ Transform:
   - {fileID: 1287003324}
   - {fileID: 1276120968}
   - {fileID: 673201766}
-  - {fileID: 1251959087}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -765,12 +764,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 160676204}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac2aceceef9a95a4ebca439d8deec8bd, type: 3}
+  m_Script: {fileID: 11500000, guid: e7b7bfbf9d41cdb4f8a2910aba92ed11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oblomki:
-  - {fileID: 8768059777249606031}
-  - {fileID: 257297194}
+  AC_Left:
+  - {fileID: 9100000, guid: f4b7c8aa278c85344b4911f287b1d09a, type: 2}
+  AC_Right:
+  - {fileID: 9100000, guid: 3d094d4518326ee4c8989cc1a18ce599, type: 2}
+  SpawnPoint:
+  - {fileID: 784809369}
+  - {fileID: 1578452848}
+  Parts:
+  - {fileID: 3484650866409189308, guid: de3990b42297cef4bbdec80c52073471, type: 3}
+  - {fileID: 1075624628861542145, guid: 5ff8ed3958226f441b586d011f30b0be, type: 3}
+  - {fileID: 1800018493343733135, guid: d833ab060b4431f40be5def31325f359, type: 3}
+  - {fileID: 8470891516161031922, guid: 8ce881bf445ec0d4298d68e4c407e49b, type: 3}
+  - {fileID: 6784966850422777103, guid: 2d3a05c7830db304c9e26c1e10881924, type: 3}
+  - {fileID: 834398103604799724, guid: a2a08fc67faad274bb7acbb8a0444296, type: 3}
+  - {fileID: 4214331735870588860, guid: fa0c9e9954db0c1429368fec336dff61, type: 3}
 --- !u!4 &168811867 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1075624628861502241, guid: 5ff8ed3958226f441b586d011f30b0be,
@@ -914,7 +925,7 @@ GameObject:
   m_Component:
   - component: {fileID: 193408884}
   m_Layer: 0
-  m_Name: RightBack
+  m_Name: RightBackSeat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -944,7 +955,7 @@ GameObject:
   m_Component:
   - component: {fileID: 207762972}
   m_Layer: 0
-  m_Name: LeftFront
+  m_Name: LeftFrontSeat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -976,7 +987,7 @@ GameObject:
   - component: {fileID: 209801489}
   - component: {fileID: 209801488}
   m_Layer: 0
-  m_Name: Polka (2)
+  m_Name: Shelf (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1109,7 +1120,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: RightScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -1131,7 +1142,7 @@ GameObject:
   - component: {fileID: 242282630}
   - component: {fileID: 242282629}
   m_Layer: 0
-  m_Name: Polka (3)
+  m_Name: Shelf (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1211,7 +1222,7 @@ GameObject:
   - component: {fileID: 243222433}
   - component: {fileID: 243222432}
   m_Layer: 0
-  m_Name: Chair (9)
+  m_Name: Chair (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1231,7 +1242,7 @@ Transform:
   - {fileID: 1864244500}
   - {fileID: 1853349752}
   m_Father: {fileID: 1440087622}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &243222432
 MeshRenderer:
@@ -1347,7 +1358,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: LeftScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -1357,134 +1368,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 252229123}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &257297193
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1287003324}
-    m_Modifications:
-    - target: {fileID: 834398103604311244, guid: a2a08fc67faad274bb7acbb8a0444296,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -44.967724
-      objectReference: {fileID: 0}
-    - target: {fileID: 834398103604311244, guid: a2a08fc67faad274bb7acbb8a0444296,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 12.169174
-      objectReference: {fileID: 0}
-    - target: {fileID: 834398103604311244, guid: a2a08fc67faad274bb7acbb8a0444296,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 13.953495
-      objectReference: {fileID: 0}
-    - target: {fileID: 834398103604311244, guid: a2a08fc67faad274bb7acbb8a0444296,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.1469087
-      objectReference: {fileID: 0}
-    - target: {fileID: 834398103604311244, guid: a2a08fc67faad274bb7acbb8a0444296,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.718101
-      objectReference: {fileID: 0}
-    - target: {fileID: 834398103604311244, guid: a2a08fc67faad274bb7acbb8a0444296,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.15953058
-      objectReference: {fileID: 0}
-    - target: {fileID: 834398103604311244, guid: a2a08fc67faad274bb7acbb8a0444296,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.6612857
-      objectReference: {fileID: 0}
-    - target: {fileID: 834398103604311244, guid: a2a08fc67faad274bb7acbb8a0444296,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 834398103604311244, guid: a2a08fc67faad274bb7acbb8a0444296,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 834398103604311244, guid: a2a08fc67faad274bb7acbb8a0444296,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 834398103604311244, guid: a2a08fc67faad274bb7acbb8a0444296,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 834398103604311244, guid: a2a08fc67faad274bb7acbb8a0444296,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 445.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 834398103604311244, guid: a2a08fc67faad274bb7acbb8a0444296,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 445.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 834398103604311244, guid: a2a08fc67faad274bb7acbb8a0444296,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 445.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 834398103604799724, guid: a2a08fc67faad274bb7acbb8a0444296,
-        type: 3}
-      propertyPath: m_Name
-      value: Oblomok (6)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a2a08fc67faad274bb7acbb8a0444296, type: 3}
---- !u!1 &257297194 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 834398103604799724, guid: a2a08fc67faad274bb7acbb8a0444296,
-    type: 3}
-  m_PrefabInstance: {fileID: 257297193}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &257297195 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 834398103604311244, guid: a2a08fc67faad274bb7acbb8a0444296,
-    type: 3}
-  m_PrefabInstance: {fileID: 257297193}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &257297196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257297194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d459eba37898404bbefb0370a89064c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeBeforeDestroy: 1.15
---- !u!95 &257297197
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257297194}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d094d4518326ee4c8989cc1a18ce599, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &269103521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1530,7 +1413,7 @@ PrefabInstance:
     - target: {fileID: 8470891516160795346, guid: 8ce881bf445ec0d4298d68e4c407e49b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8470891516160795346, guid: 8ce881bf445ec0d4298d68e4c407e49b,
         type: 3}
@@ -1565,7 +1448,7 @@ PrefabInstance:
     - target: {fileID: 8470891516161031922, guid: 8ce881bf445ec0d4298d68e4c407e49b,
         type: 3}
       propertyPath: m_Name
-      value: Oblomok (4)
+      value: Chip (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ce881bf445ec0d4298d68e4c407e49b, type: 3}
@@ -1579,7 +1462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 280923147}
   m_Layer: 0
-  m_Name: RightFront
+  m_Name: RightFrontSeat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1664,7 +1547,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: RightScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -1719,7 +1602,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728094, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9127458965087728094, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
@@ -1739,7 +1622,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: RightScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -1814,7 +1697,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: RightScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -1836,7 +1719,7 @@ GameObject:
   - component: {fileID: 299055419}
   - component: {fileID: 299055418}
   m_Layer: 0
-  m_Name: Polka (8)
+  m_Name: Shelf (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1916,7 +1799,7 @@ GameObject:
   - component: {fileID: 303106337}
   - component: {fileID: 303106336}
   m_Layer: 0
-  m_Name: Panel (6)
+  m_Name: Panel (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1930,11 +1813,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303106334}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0.000000029802322, w: 0.7071067}
-  m_LocalPosition: {x: 0.0000006961636, y: 0, z: -39.630005}
+  m_LocalPosition: {x: 0, y: 0, z: -39.630005}
   m_LocalScale: {x: 100, y: 100, z: 99.99997}
   m_Children: []
   m_Father: {fileID: 1681003364}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &303106336
 MeshRenderer:
@@ -2052,7 +1935,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: RightScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -2074,7 +1957,7 @@ GameObject:
   - component: {fileID: 329894166}
   - component: {fileID: 329894165}
   m_Layer: 0
-  m_Name: Panel (2)
+  m_Name: Panel (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2092,7 +1975,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 99.99997}
   m_Children: []
   m_Father: {fileID: 1681003364}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &329894165
 MeshRenderer:
@@ -2157,7 +2040,7 @@ GameObject:
   - component: {fileID: 338898884}
   - component: {fileID: 338898883}
   m_Layer: 0
-  m_Name: Panel (3)
+  m_Name: Panel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2175,7 +2058,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 99.99997}
   m_Children: []
   m_Father: {fileID: 1681003364}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &338898883
 MeshRenderer:
@@ -2293,7 +2176,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: LeftScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -2368,7 +2251,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: LeftScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -2443,7 +2326,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: RightScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -2463,7 +2346,7 @@ PrefabInstance:
     - target: {fileID: 6784966850422777103, guid: 2d3a05c7830db304c9e26c1e10881924,
         type: 3}
       propertyPath: m_Name
-      value: Oblomok (8)
+      value: Chip (8)
       objectReference: {fileID: 0}
     - target: {fileID: 6784966850423273775, guid: 2d3a05c7830db304c9e26c1e10881924,
         type: 3}
@@ -7410,7 +7293,7 @@ GameObject:
   - component: {fileID: 577262186}
   - component: {fileID: 577262185}
   m_Layer: 0
-  m_Name: Chair (4)
+  m_Name: Chair (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7430,7 +7313,7 @@ Transform:
   - {fileID: 972703663}
   - {fileID: 1840212070}
   m_Father: {fileID: 1440087622}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &577262185
 MeshRenderer:
@@ -7499,7 +7382,7 @@ GameObject:
   - component: {fileID: 600792121}
   - component: {fileID: 600792120}
   m_Layer: 0
-  m_Name: Polka (7)
+  m_Name: Shelf (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7592,7 +7475,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601138591}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 11.119999, z: -49.18}
+  m_LocalPosition: {x: -0, y: 11.119999, z: -50.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 175280671}
@@ -7724,7 +7607,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: LeftScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -7799,7 +7682,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: LeftScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -7937,7 +7820,7 @@ PrefabInstance:
     - target: {fileID: 8470891516160795346, guid: 8ce881bf445ec0d4298d68e4c407e49b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8470891516160795346, guid: 8ce881bf445ec0d4298d68e4c407e49b,
         type: 3}
@@ -7972,7 +7855,7 @@ PrefabInstance:
     - target: {fileID: 8470891516161031922, guid: 8ce881bf445ec0d4298d68e4c407e49b,
         type: 3}
       propertyPath: m_Name
-      value: Oblomok (5)
+      value: Chip (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ce881bf445ec0d4298d68e4c407e49b, type: 3}
@@ -7987,7 +7870,7 @@ GameObject:
   - component: {fileID: 628814741}
   - component: {fileID: 628814742}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: AnimatedChairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8007,7 +7890,7 @@ Transform:
   - {fileID: 1460265459}
   - {fileID: 1550772314}
   m_Father: {fileID: 1440087622}
-  m_RootOrder: 14
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 0}
 --- !u!95 &628814742
 Animator:
@@ -8040,7 +7923,7 @@ GameObject:
   - component: {fileID: 663238346}
   - component: {fileID: 663238345}
   m_Layer: 0
-  m_Name: Polka (7)
+  m_Name: Shelf (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8120,7 +8003,7 @@ GameObject:
   - component: {fileID: 672690803}
   - component: {fileID: 672690802}
   m_Layer: 0
-  m_Name: Panel (3)
+  m_Name: Panel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8138,7 +8021,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 99.99997}
   m_Children: []
   m_Father: {fileID: 898238366}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &672690802
 MeshRenderer:
@@ -8214,7 +8097,7 @@ GameObject:
   - component: {fileID: 708584378}
   - component: {fileID: 708584379}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: BaggageShelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8320,7 +8203,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: LeftScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -8342,7 +8225,7 @@ GameObject:
   - component: {fileID: 781538169}
   - component: {fileID: 781538168}
   m_Layer: 0
-  m_Name: Chair (14)
+  m_Name: Chair (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8362,7 +8245,7 @@ Transform:
   - {fileID: 1650012615}
   - {fileID: 1960695812}
   m_Father: {fileID: 1440087622}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &781538168
 MeshRenderer:
@@ -8413,6 +8296,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781538166}
   m_Mesh: {fileID: 4300000, guid: e82436a893ec2a94faaf08b1f50d6ce4, type: 3}
+--- !u!1 &784809368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 784809369}
+  m_Layer: 0
+  m_Name: LeftPartSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &784809369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784809368}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -34.2, y: 0.9, z: 85.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1287003324}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &836373628
 GameObject:
   m_ObjectHideFlags: 0
@@ -8423,7 +8336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 836373629}
   m_Layer: 0
-  m_Name: Polki
+  m_Name: Shelves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8455,7 +8368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 889141095}
   m_Layer: 0
-  m_Name: LeftBack
+  m_Name: LeftBackSeat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8485,7 +8398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 898238366}
   m_Layer: 0
-  m_Name: Panels_r
+  m_Name: RightPanels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8502,12 +8415,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
+  - {fileID: 672690801}
   - {fileID: 1549798585}
   - {fileID: 1249782586}
-  - {fileID: 672690801}
+  - {fileID: 1966312307}
   - {fileID: 2004327690}
   - {fileID: 1453379356}
-  - {fileID: 1966312307}
   - {fileID: 627658776}
   - {fileID: 1848799883}
   m_Father: {fileID: 1526746923}
@@ -8523,7 +8436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 960130767}
   m_Layer: 0
-  m_Name: Polka_r
+  m_Name: RightShelves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8717,7 +8630,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: LeftScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -8739,7 +8652,7 @@ GameObject:
   - component: {fileID: 988381554}
   - component: {fileID: 988381553}
   m_Layer: 0
-  m_Name: Chair (13)
+  m_Name: Chair (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8759,7 +8672,7 @@ Transform:
   - {fileID: 410725526}
   - {fileID: 221196581}
   m_Father: {fileID: 1440087622}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &988381553
 MeshRenderer:
@@ -8824,7 +8737,7 @@ GameObject:
   - component: {fileID: 998513143}
   - component: {fileID: 998513144}
   m_Layer: 0
-  m_Name: TurbineRight
+  m_Name: RightTurbine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8991,7 +8904,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: RightScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -9019,7 +8932,7 @@ GameObject:
   - component: {fileID: 1026702499}
   - component: {fileID: 1026702498}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Baggage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9098,7 +9011,7 @@ GameObject:
   - component: {fileID: 1032566992}
   - component: {fileID: 1032566991}
   m_Layer: 0
-  m_Name: Polka (6)
+  m_Name: Shelf (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9176,7 +9089,7 @@ PrefabInstance:
     - target: {fileID: 6784966850422777103, guid: 2d3a05c7830db304c9e26c1e10881924,
         type: 3}
       propertyPath: m_Name
-      value: Oblomok (10)
+      value: Chip (10)
       objectReference: {fileID: 0}
     - target: {fileID: 6784966850423273775, guid: 2d3a05c7830db304c9e26c1e10881924,
         type: 3}
@@ -9315,7 +9228,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: RightScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -9390,7 +9303,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: LeftScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -9501,7 +9414,7 @@ GameObject:
   - component: {fileID: 1136194874}
   - component: {fileID: 1136194873}
   m_Layer: 0
-  m_Name: Panel (4)
+  m_Name: Panel (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9519,7 +9432,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 99.99997}
   m_Children: []
   m_Father: {fileID: 1681003364}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1136194873
 MeshRenderer:
@@ -9643,7 +9556,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: LeftScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -9665,7 +9578,7 @@ GameObject:
   - component: {fileID: 1173265403}
   - component: {fileID: 1173265402}
   m_Layer: 0
-  m_Name: Polka (3)
+  m_Name: Shelf (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9798,7 +9711,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: LeftScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -9820,7 +9733,7 @@ GameObject:
   - component: {fileID: 1196303176}
   - component: {fileID: 1196303175}
   m_Layer: 0
-  m_Name: Chair (16)
+  m_Name: Chair (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9903,7 +9816,7 @@ GameObject:
   - component: {fileID: 1227196663}
   - component: {fileID: 1227196662}
   m_Layer: 0
-  m_Name: Polka (2)
+  m_Name: Shelf (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9983,7 +9896,7 @@ GameObject:
   - component: {fileID: 1238076140}
   - component: {fileID: 1238076139}
   m_Layer: 0
-  m_Name: Chair (5)
+  m_Name: Chair (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10003,7 +9916,7 @@ Transform:
   - {fileID: 1187523476}
   - {fileID: 315844055}
   m_Father: {fileID: 1440087622}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1238076139
 MeshRenderer:
@@ -10066,7 +9979,7 @@ GameObject:
   - component: {fileID: 1249782588}
   - component: {fileID: 1249782587}
   m_Layer: 0
-  m_Name: Panel (2)
+  m_Name: Panel (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10084,7 +9997,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 99.99997}
   m_Children: []
   m_Father: {fileID: 898238366}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1249782587
 MeshRenderer:
@@ -10148,7 +10061,7 @@ GameObject:
   - component: {fileID: 1251959087}
   - component: {fileID: 1251959088}
   m_Layer: 0
-  m_Name: map
+  m_Name: PlaneSchema
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10161,12 +10074,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251959086}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.12, y: -0.0000038147, z: -37.27}
-  m_LocalScale: {x: 0.10218585, y: 0.10218585, z: 0.10218585}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0.0012000035, y: 0.70269996, z: 0}
+  m_LocalScale: {x: 0.0010218585, y: 0.0010218587, z: 0.0010218587}
   m_Children: []
-  m_Father: {fileID: 160676206}
-  m_RootOrder: 3
+  m_Father: {fileID: 1287003312}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1251959088
 SpriteRenderer:
@@ -10230,7 +10143,7 @@ GameObject:
   - component: {fileID: 1253633277}
   - component: {fileID: 1253633276}
   m_Layer: 0
-  m_Name: Polka (1)
+  m_Name: Shelf (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10308,7 +10221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1276120968}
   m_Layer: 0
-  m_Name: SpawnPoints
+  m_Name: PlayerSeats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10447,7 +10360,7 @@ GameObject:
   - component: {fileID: 1283611792}
   - component: {fileID: 1284709968}
   m_Layer: 0
-  m_Name: PLane
+  m_Name: PlaneBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10594,7 +10507,8 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
-  m_Children: []
+  m_Children:
+  - {fileID: 1251959087}
   m_Father: {fileID: 1287003324}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10632,8 +10546,8 @@ Transform:
   - {fileID: 836373629}
   - {fileID: 1440087622}
   - {fileID: 4917792486097538612}
-  - {fileID: 8768059777249830319}
-  - {fileID: 257297195}
+  - {fileID: 784809369}
+  - {fileID: 1578452848}
   m_Father: {fileID: 160676206}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10702,7 +10616,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: RightScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -10722,7 +10636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1351509346}
   m_Layer: 0
-  m_Name: Fire_right
+  m_Name: RightFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10757,7 +10671,7 @@ GameObject:
   - component: {fileID: 1354629461}
   - component: {fileID: 1354629460}
   m_Layer: 0
-  m_Name: Polka (4)
+  m_Name: Shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10856,7 +10770,7 @@ GameObject:
   - component: {fileID: 1364921278}
   - component: {fileID: 1364921277}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Baggage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10968,7 +10882,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728094, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9127458965087728094, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
@@ -10988,7 +10902,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: RightScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -11043,7 +10957,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728094, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9127458965087728094, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
@@ -11063,7 +10977,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: LeftScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -11102,19 +11016,19 @@ Transform:
   m_Children:
   - {fileID: 1843478860}
   - {fileID: 1102846859}
-  - {fileID: 1605866816}
   - {fileID: 577262184}
-  - {fileID: 1238076138}
+  - {fileID: 1605866816}
   - {fileID: 1518806255}
-  - {fileID: 243222431}
-  - {fileID: 1795580196}
-  - {fileID: 1771061764}
-  - {fileID: 1500870041}
-  - {fileID: 988381552}
-  - {fileID: 781538167}
-  - {fileID: 1709462069}
-  - {fileID: 1196303174}
+  - {fileID: 1238076138}
   - {fileID: 628814741}
+  - {fileID: 1771061764}
+  - {fileID: 243222431}
+  - {fileID: 988381552}
+  - {fileID: 1500870041}
+  - {fileID: 1709462069}
+  - {fileID: 781538167}
+  - {fileID: 1196303174}
+  - {fileID: 1795580196}
   m_Father: {fileID: 1287003324}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11136,7 +11050,7 @@ GameObject:
   - component: {fileID: 1453379358}
   - component: {fileID: 1453379357}
   m_Layer: 0
-  m_Name: Panel (5)
+  m_Name: Panel (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11154,7 +11068,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 99.99997}
   m_Children: []
   m_Father: {fileID: 898238366}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1453379357
 MeshRenderer:
@@ -11226,7 +11140,7 @@ GameObject:
   - component: {fileID: 1460265460}
   - component: {fileID: 1460265462}
   m_Layer: 0
-  m_Name: Chair (7)
+  m_Name: Chair (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11243,8 +11157,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1370074579}
   - {fileID: 1393402425}
+  - {fileID: 1370074579}
   m_Father: {fileID: 628814741}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
@@ -11322,7 +11236,7 @@ GameObject:
   - component: {fileID: 1476833999}
   - component: {fileID: 1476833998}
   m_Layer: 0
-  m_Name: Polka (8)
+  m_Name: Shelf (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11402,7 +11316,7 @@ GameObject:
   - component: {fileID: 1500870043}
   - component: {fileID: 1500870042}
   m_Layer: 0
-  m_Name: Chair (12)
+  m_Name: Chair (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11422,7 +11336,7 @@ Transform:
   - {fileID: 1905633184}
   - {fileID: 1008842702}
   m_Father: {fileID: 1440087622}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1500870042
 MeshRenderer:
@@ -11485,7 +11399,7 @@ GameObject:
   - component: {fileID: 1518806257}
   - component: {fileID: 1518806256}
   m_Layer: 0
-  m_Name: Chair (6)
+  m_Name: Chair (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11505,7 +11419,7 @@ Transform:
   - {fileID: 623617733}
   - {fileID: 456359132}
   m_Father: {fileID: 1440087622}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1518806256
 MeshRenderer:
@@ -11600,7 +11514,7 @@ GameObject:
   - component: {fileID: 1549798587}
   - component: {fileID: 1549798586}
   m_Layer: 0
-  m_Name: Panel (1)
+  m_Name: Panel (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11618,7 +11532,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 99.99997}
   m_Children: []
   m_Father: {fileID: 898238366}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1549798586
 MeshRenderer:
@@ -11683,7 +11597,7 @@ GameObject:
   - component: {fileID: 1550772316}
   - component: {fileID: 1550772315}
   m_Layer: 0
-  m_Name: Chair (8)
+  m_Name: Chair (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11700,8 +11614,8 @@ Transform:
   m_LocalPosition: {x: 0.0034201574, y: -0.12828502, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 293010936}
   - {fileID: 1871644609}
+  - {fileID: 293010936}
   m_Father: {fileID: 628814741}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 94.359}
@@ -11837,6 +11751,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576662405}
   m_Mesh: {fileID: 4300008, guid: 939ed3a626201874a85844d48290d8f2, type: 3}
+--- !u!1 &1578452847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1578452848}
+  m_Layer: 0
+  m_Name: RightPartSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1578452848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578452847}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27.000002, y: 0.9000015, z: 81}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1287003324}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1605866815
 GameObject:
   m_ObjectHideFlags: 0
@@ -11849,7 +11793,7 @@ GameObject:
   - component: {fileID: 1605866818}
   - component: {fileID: 1605866817}
   m_Layer: 0
-  m_Name: Chair (3)
+  m_Name: Chair (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11869,7 +11813,7 @@ Transform:
   - {fileID: 252229124}
   - {fileID: 293790867}
   m_Father: {fileID: 1440087622}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1605866817
 MeshRenderer:
@@ -11965,7 +11909,7 @@ PrefabInstance:
     - target: {fileID: 1075624628861502241, guid: 5ff8ed3958226f441b586d011f30b0be,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1075624628861502241, guid: 5ff8ed3958226f441b586d011f30b0be,
         type: 3}
@@ -12000,7 +11944,7 @@ PrefabInstance:
     - target: {fileID: 1075624628861542145, guid: 5ff8ed3958226f441b586d011f30b0be,
         type: 3}
       propertyPath: m_Name
-      value: Oblomok (2)
+      value: Chip (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ff8ed3958226f441b586d011f30b0be, type: 3}
@@ -12069,7 +12013,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: LeftScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -12092,7 +12036,7 @@ GameObject:
   - component: {fileID: 1653921968}
   - component: {fileID: 1653921970}
   m_Layer: 0
-  m_Name: Polka (4)
+  m_Name: Shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12190,7 +12134,7 @@ GameObject:
   - component: {fileID: 1663616825}
   - component: {fileID: 1663616826}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: BaggageShelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12241,7 +12185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1681003364}
   m_Layer: 0
-  m_Name: Panels_l
+  m_Name: LeftPanels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12258,12 +12202,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 338898882}
   - {fileID: 1968146160}
   - {fileID: 329894164}
-  - {fileID: 338898882}
+  - {fileID: 303106335}
   - {fileID: 1136194872}
   - {fileID: 1838415457}
-  - {fileID: 303106335}
   - {fileID: 9491360}
   - {fileID: 1576662406}
   m_Father: {fileID: 1526746923}
@@ -17127,7 +17071,7 @@ GameObject:
   - component: {fileID: 1705947415}
   - component: {fileID: 1705947414}
   m_Layer: 0
-  m_Name: Polka (5)
+  m_Name: Shelf (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17207,7 +17151,7 @@ GameObject:
   - component: {fileID: 1709462071}
   - component: {fileID: 1709462070}
   m_Layer: 0
-  m_Name: Chair (15)
+  m_Name: Chair (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17227,7 +17171,7 @@ Transform:
   - {fileID: 1164098899}
   - {fileID: 102425986}
   m_Father: {fileID: 1440087622}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1709462070
 MeshRenderer:
@@ -17343,7 +17287,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: RightScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -17365,7 +17309,7 @@ GameObject:
   - component: {fileID: 1751092235}
   - component: {fileID: 1751092234}
   m_Layer: 0
-  m_Name: Polka (1)
+  m_Name: Shelf (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17445,7 +17389,7 @@ GameObject:
   - component: {fileID: 1771061766}
   - component: {fileID: 1771061765}
   m_Layer: 0
-  m_Name: Chair (11)
+  m_Name: Chair (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17465,7 +17409,7 @@ Transform:
   - {fileID: 626269733}
   - {fileID: 282589264}
   m_Father: {fileID: 1440087622}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1771061765
 MeshRenderer:
@@ -17530,7 +17474,7 @@ GameObject:
   - component: {fileID: 1795580200}
   - component: {fileID: 1795580199}
   m_Layer: 0
-  m_Name: Chair (10)
+  m_Name: AnimatedChair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17550,7 +17494,7 @@ Transform:
   - {fileID: 357649740}
   - {fileID: 1721245884}
   m_Father: {fileID: 1440087622}
-  m_RootOrder: 7
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1795580197
 MeshRenderer:
@@ -17645,7 +17589,7 @@ GameObject:
   - component: {fileID: 1838415459}
   - component: {fileID: 1838415458}
   m_Layer: 0
-  m_Name: Panel (5)
+  m_Name: Panel (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17663,7 +17607,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 99.99997}
   m_Children: []
   m_Father: {fileID: 1681003364}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1838415458
 MeshRenderer:
@@ -17781,7 +17725,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: RightScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -18022,7 +17966,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: RightScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -18097,7 +18041,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: LeftScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -18152,7 +18096,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728094, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9127458965087728094, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
@@ -18172,7 +18116,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: LeftScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -18192,7 +18136,7 @@ PrefabInstance:
     - target: {fileID: 3484650866409189308, guid: de3990b42297cef4bbdec80c52073471,
         type: 3}
       propertyPath: m_Name
-      value: Oblomok (1)
+      value: Chip (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3484650866409223068, guid: de3990b42297cef4bbdec80c52073471,
         type: 3}
@@ -18232,7 +18176,7 @@ PrefabInstance:
     - target: {fileID: 3484650866409223068, guid: de3990b42297cef4bbdec80c52073471,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3484650866409223068, guid: de3990b42297cef4bbdec80c52073471,
         type: 3}
@@ -18331,7 +18275,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: LeftScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -18406,7 +18350,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: RightScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -18481,7 +18425,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: RightScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}
@@ -18503,7 +18447,7 @@ GameObject:
   - component: {fileID: 1966312309}
   - component: {fileID: 1966312308}
   m_Layer: 0
-  m_Name: Panel (6)
+  m_Name: Panel (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18517,11 +18461,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1966312306}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0.000000029802322, w: 0.7071067}
-  m_LocalPosition: {x: 0.0000006961636, y: 0, z: -39.630005}
+  m_LocalPosition: {x: 0, y: 0, z: -39.630005}
   m_LocalScale: {x: 100, y: 100, z: 99.99997}
   m_Children: []
   m_Father: {fileID: 898238366}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1966312308
 MeshRenderer:
@@ -18586,7 +18530,7 @@ GameObject:
   - component: {fileID: 1968146162}
   - component: {fileID: 1968146161}
   m_Layer: 0
-  m_Name: Panel (1)
+  m_Name: Panel (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18604,7 +18548,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 99.99997}
   m_Children: []
   m_Father: {fileID: 1681003364}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1968146161
 MeshRenderer:
@@ -18669,7 +18613,7 @@ GameObject:
   - component: {fileID: 1973390058}
   - component: {fileID: 1973390057}
   m_Layer: 0
-  m_Name: Polka (6)
+  m_Name: Shelf (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18749,7 +18693,7 @@ GameObject:
   - component: {fileID: 1991767017}
   - component: {fileID: 1991767016}
   m_Layer: 0
-  m_Name: Polka (5)
+  m_Name: Shelf (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18829,7 +18773,7 @@ GameObject:
   - component: {fileID: 2004327692}
   - component: {fileID: 2004327691}
   m_Layer: 0
-  m_Name: Panel (4)
+  m_Name: Panel (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18847,7 +18791,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 99.99997}
   m_Children: []
   m_Father: {fileID: 898238366}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2004327691
 MeshRenderer:
@@ -18910,7 +18854,7 @@ PrefabInstance:
     - target: {fileID: 6784966850422777103, guid: 2d3a05c7830db304c9e26c1e10881924,
         type: 3}
       propertyPath: m_Name
-      value: Oblomok (7)
+      value: Chip (7)
       objectReference: {fileID: 0}
     - target: {fileID: 6784966850423273775, guid: 2d3a05c7830db304c9e26c1e10881924,
         type: 3}
@@ -18994,7 +18938,7 @@ PrefabInstance:
     - target: {fileID: 6784966850422777103, guid: 2d3a05c7830db304c9e26c1e10881924,
         type: 3}
       propertyPath: m_Name
-      value: Oblomok (9)
+      value: Chip (9)
       objectReference: {fileID: 0}
     - target: {fileID: 6784966850423273775, guid: 2d3a05c7830db304c9e26c1e10881924,
         type: 3}
@@ -19212,11 +19156,12 @@ MonoBehaviour:
   LeftChairs: {fileID: 628814740}
   LeftChair: {fileID: 1460265458}
   RightChair: {fileID: 1795580195}
-  sc: {fileID: 160676208}
-  Fire_R: {fileID: 1351509345}
-  Fire_L: {fileID: 3979010260615780033}
-  Smoke_R: {fileID: 1642320381977878}
-  Smoke_L: {fileID: 1642321356796116}
+  Sounds: {fileID: 160676208}
+  Spawner: {fileID: 160676209}
+  FireRight: {fileID: 1351509345}
+  FireLeft: {fileID: 3979010260615780033}
+  SmokeRight: {fileID: 1642320381977878}
+  SmokeLeft: {fileID: 1642321356796116}
 --- !u!4 &2126113104
 Transform:
   m_ObjectHideFlags: 0
@@ -19297,7 +19242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4105057917153810}
   m_Layer: 0
-  m_Name: smoke_right
+  m_Name: RightSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19313,7 +19258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4105058757289936}
   m_Layer: 0
-  m_Name: smoke_left
+  m_Name: LeftSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28883,7 +28828,7 @@ GameObject:
   - component: {fileID: 1218254597961432852}
   - component: {fileID: 1218254597961432853}
   m_Layer: 0
-  m_Name: TurbineLeft
+  m_Name: LeftTurbine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38444,7 +38389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3975568361170866779}
   m_Layer: 0
-  m_Name: Fire_left
+  m_Name: LeftFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38547,7 +38492,7 @@ GameObject:
   - component: {fileID: 4917792486097310229}
   - component: {fileID: 4917792486097310230}
   m_Layer: 0
-  m_Name: Tale(deformed)
+  m_Name: PlaneTale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38596,11 +38541,11 @@ Transform:
   m_LocalPosition: {x: 0, y: -0, z: -119.5}
   m_LocalScale: {x: 1065.7646, y: 1065.7651, z: 1065.7648}
   m_Children:
-  - {fileID: 1158147728}
-  - {fileID: 588457820}
   - {fileID: 1095945862}
   - {fileID: 168811867}
   - {fileID: 151092200}
+  - {fileID: 1158147728}
+  - {fileID: 588457820}
   - {fileID: 144503372}
   - {fileID: 571224011}
   - {fileID: 1454881855}
@@ -38609,119 +38554,6 @@ Transform:
   m_Father: {fileID: 1287003324}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8768059777249606031
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8768059777249830319}
-  - component: {fileID: 8768059777250600333}
-  - component: {fileID: 8768059777251600205}
-  - component: {fileID: 8768059777249606032}
-  - component: {fileID: 8768059777249606033}
-  m_Layer: 0
-  m_Name: Oblomok(1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!95 &8768059777249606032
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8768059777249606031}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d094d4518326ee4c8989cc1a18ce599, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8768059777249606033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8768059777249606031}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d459eba37898404bbefb0370a89064c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeBeforeDestroy: 1.15
---- !u!4 &8768059777249830319
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8768059777249606031}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -21.83, y: 1.43, z: 14.75}
-  m_LocalScale: {x: 397.23007, y: 397.23, z: 397.23}
-  m_Children: []
-  m_Father: {fileID: 1287003324}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!33 &8768059777250600333
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8768059777249606031}
-  m_Mesh: {fileID: 4300000, guid: b86577d2f8359274d96c5762f3a270cc, type: 3}
---- !u!23 &8768059777251600205
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8768059777249606031}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 210941a1cb5e55847ba783cbcf65ad3f, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!1001 &9127458964246875197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38787,7 +38619,7 @@ PrefabInstance:
     - target: {fileID: 9127458965087728095, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9,
         type: 3}
       propertyPath: m_Name
-      value: Screen (1)
+      value: LeftScreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf7551a3320e5d4fbd00ea77e4fb6e9, type: 3}

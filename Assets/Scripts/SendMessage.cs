@@ -5,14 +5,14 @@ using System.Collections;
 
 public class SendMessage : MonoBehaviour
 {
-    private FutuRiftController controller;
-    private float pitch = 0;
-    private float roll = 0;
-    public TestUDP TU;
+    FutuRiftController controller;
+    float pitch = 0;
+    float roll = 0;
+    [SerializeField] TestUDP TU;
     [Space(10)]
     [Header("Connection settings")]
-    public int port = 7000;
-    public string ip = "192.168.1.255";
+    [SerializeField] int port = 7000;
+    [SerializeField] string ip = "192.168.1.255";
     [Space(10)]
     [Header("Start settings")]
     [Range(0, 60)] public int TimeToStart = 10;
@@ -31,20 +31,21 @@ public class SendMessage : MonoBehaviour
     [Range(0.1f, 1f)] public float PitchPerTickShake = 0.3f;
     [Range(0.01f, 0.1f)] public float ShakeInterval = 0.025f;
     [Header("Animated parts")]
-    public GameObject LeftTurbine;
-    public GameObject RightTurbine;
-    public GameObject RightBaggage;
-    public GameObject LeftBaggage;
-    public GameObject Tale;
-    public GameObject LeftChairs;
-    public GameObject LeftChair;
-    public GameObject RightChair;
-    public SoundController sc;
+    [SerializeField] GameObject LeftTurbine;
+    [SerializeField] GameObject RightTurbine;
+    [SerializeField] GameObject RightBaggage;
+    [SerializeField] GameObject LeftBaggage;
+    [SerializeField] GameObject Tale;
+    [SerializeField] GameObject LeftChairs;
+    [SerializeField] GameObject LeftChair;
+    [SerializeField] GameObject RightChair;
+    [SerializeField] SoundController Sounds;
+    [SerializeField] PartSpawner Spawner;
     [Header("Fire and Smoke")]
-    public GameObject Fire_R;
-    public GameObject Fire_L;
-    public GameObject Smoke_R;
-    public GameObject Smoke_L;
+    [SerializeField] GameObject FireRight;
+    [SerializeField] GameObject FireLeft;
+    [SerializeField] GameObject SmokeRight;
+    [SerializeField] GameObject SmokeLeft;
 
 
     void Start()
@@ -71,11 +72,12 @@ public class SendMessage : MonoBehaviour
     {
         Debug.Log("Start");
         yield return new WaitForSeconds(TimeToStart);
-        sc.PlaySeatBelt();
+        Sounds.PlaySeatBelt();
         StartCoroutine("Tourbine_L");
         StartCoroutine("Pitch");
         StartCoroutine("Roll");
         StartCoroutine("Shake");
+        Spawner.Spawn();
     }
 
     IEnumerator Pitch()
@@ -147,9 +149,9 @@ public class SendMessage : MonoBehaviour
 
     IEnumerator Tourbine_L()
     {
-        Smoke_L.SetActive(true);
+        SmokeLeft.SetActive(true);
         yield return new WaitForSeconds(0.5f);
-        Fire_L.SetActive(true);
+        FireLeft.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         LeftTurbine.GetComponent<Animator>().enabled = true;
         LeftTurbine.GetComponent<DestroyAfterSomeTime>().enabled = true;
@@ -158,9 +160,9 @@ public class SendMessage : MonoBehaviour
 
     IEnumerator Tourbine_R()
     {
-        Smoke_R.SetActive(true);
+        SmokeRight.SetActive(true);
         yield return new WaitForSeconds(0.5f);
-        Fire_R.SetActive(true);
+        FireRight.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         RightTurbine.GetComponent<Animator>().enabled = true;
         RightTurbine.GetComponent<DestroyAfterSomeTime>().enabled = true;
