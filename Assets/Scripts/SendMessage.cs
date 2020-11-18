@@ -1,18 +1,23 @@
-﻿using UnityEngine;
-using ChairControl.ChairWork;
-using System.Net;
+﻿using ChairControl.ChairWork;
+using ChairControl.ChairWork.Options;
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using UnityEngine;
 
 public class SendMessage : MonoBehaviour
 {
     FutuRiftController controller;
     float pitch = 0;
     float roll = 0;
-    [SerializeField] TestUDP TU;
+    [SerializeField] PlaneController TU;
     [Space(10)]
     [Header("Connection settings")]
-    [SerializeField] int port = 7000;
-    [SerializeField] string ip = "192.168.1.255";
+    [SerializeField] bool UseUDP = false;
+    [SerializeField] UdpOptions UdpOpt;
+    [SerializeField] int Com = 6;
     [Space(10)]
     [Header("Start settings")]
     [Range(0, 60)] public int TimeToStart = 10;
@@ -50,11 +55,22 @@ public class SendMessage : MonoBehaviour
 
     void Start()
     {
-        controller = new FutuRiftController(port, IPAddress.Parse(ip))
+        if (UseUDP)
         {
-            Pitch = pitch,
-            Roll = roll
-        };
+            controller = new FutuRiftController(UdpOpt)
+            {
+                Pitch = pitch,
+                Roll = roll
+            };
+        }
+        else
+        {
+            controller = new FutuRiftController(new ComPortOptions { ComPort = Com })
+            {
+                Pitch = pitch,
+                Roll = roll
+            };
+        }
     }
 
     public void Activate()

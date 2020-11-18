@@ -1,13 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Net;
-using System.Net.Sockets;
-using System.Text;
-using UnityEngine;
-using System.Threading;
-using System;
+﻿using UnityEngine;
 
-public class TestUDP : MonoBehaviour
+public class PlaneController : MonoBehaviour
 {
     public void LeanForwardNBack(float n)
     {

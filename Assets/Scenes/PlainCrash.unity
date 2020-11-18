@@ -19135,8 +19135,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TU: {fileID: 160676205}
-  port: 7000
-  ip: 192.168.1.255
+  UseUDP: 1
+  UdpOpt:
+    ip: 127.0.0.1
+    port: 6065
+  Com: 6
   TimeToStart: 3
   ShakeTick: 0.1
   PitchShake: 0.5
