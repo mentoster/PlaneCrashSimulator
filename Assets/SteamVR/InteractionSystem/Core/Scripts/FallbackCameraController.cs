@@ -94,11 +94,7 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		void OnGUI()
 		{
-			if ( showInstructions )
-			{
-				GUI.Label( new Rect( 10.0f, 10.0f, 600.0f, 400.0f ),
-					" " );
-			}
+
 		}
 	}
 }
