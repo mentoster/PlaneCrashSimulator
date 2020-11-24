@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ChoosePlace : MonoBehaviour
 {
@@ -43,15 +42,5 @@ public class ChoosePlace : MonoBehaviour
                 onPlace = true;
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Restart();
-        }
-    }
-
-    void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
