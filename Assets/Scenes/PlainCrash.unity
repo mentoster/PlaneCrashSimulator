@@ -779,8 +779,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AC_Left:
   - {fileID: 9100000, guid: f4b7c8aa278c85344b4911f287b1d09a, type: 2}
+  - {fileID: 9100000, guid: db96269389d5cd2409131b2879db8284, type: 2}
   AC_Right:
   - {fileID: 9100000, guid: 3d094d4518326ee4c8989cc1a18ce599, type: 2}
+  - {fileID: 9100000, guid: 5c2ef01921afa4a45a65e50d0208f333, type: 2}
   SpawnPoint:
   - {fileID: 784809369}
   - {fileID: 1578452848}
