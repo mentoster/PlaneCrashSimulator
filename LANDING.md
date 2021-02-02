@@ -20,7 +20,6 @@ Plain crash simulator
 
 # Tags
 * VR
-* Futurift chair
 ---
 # Tech
 * Unity
