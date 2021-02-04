@@ -1,5 +1,5 @@
 # Title
-Plain crash simulator
+Plane crash simulator
 
 ---
 
