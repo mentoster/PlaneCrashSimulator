@@ -51,6 +51,9 @@ public class SendMessage : MonoBehaviour
     [SerializeField] GameObject FireLeft;
     [SerializeField] GameObject SmokeRight;
     [SerializeField] GameObject SmokeLeft;
+    [Header("Baggage")]
+    [SerializeField] GameObject OnChair;
+    [SerializeField] GameObject OnFloor;
 
 
     void Start()
@@ -94,6 +97,10 @@ public class SendMessage : MonoBehaviour
         StartCoroutine("Roll");
         StartCoroutine("Shake");
         Spawner.Spawn();
+        yield return new WaitForSeconds(4f);
+        OnChair.GetComponent<Animator>().enabled = true;
+        yield return new WaitForSeconds(2.5f);
+        OnFloor.GetComponent<Animator>().enabled = true;
     }
 
     IEnumerator Pitch()
