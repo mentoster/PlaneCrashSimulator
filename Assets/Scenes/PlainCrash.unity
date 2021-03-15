@@ -8052,7 +8052,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615269289}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ac1ff4fadc1986045ac8dcaf9df9c2b3, type: 2}
   m_CullingMode: 0
@@ -13474,7 +13474,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611932529}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: bd1065dba8e28b74b9d519cba4041ad6, type: 2}
   m_CullingMode: 0
@@ -21279,8 +21279,8 @@ MonoBehaviour:
   ShakeInterval: 0.02
   LeftTurbine: {fileID: 1218254597961432851}
   RightTurbine: {fileID: 998513139}
-  RightBaggage: {fileID: 708584377}
-  LeftBaggage: {fileID: 1663616824}
+  RightBaggage: {fileID: 708584379}
+  LeftBaggage: {fileID: 1663616826}
   Tale: {fileID: 4917792486097310228}
   LeftChairs: {fileID: 628814740}
   LeftChair: {fileID: 1460265458}
@@ -21291,8 +21291,10 @@ MonoBehaviour:
   FireLeft: {fileID: 3979010260615780033}
   SmokeRight: {fileID: 1642320381977878}
   SmokeLeft: {fileID: 1642321356796116}
-  OnChair: {fileID: 1687322866}
-  OnFloor: {fileID: 1631066608}
+  OnChair: {fileID: 1687322869}
+  OnFloor: {fileID: 1631066611}
+  OnFrontChair: {fileID: 615269290}
+  OnFrontFloor: {fileID: 1611932530}
 --- !u!4 &2126113104
 Transform:
   m_ObjectHideFlags: 0
