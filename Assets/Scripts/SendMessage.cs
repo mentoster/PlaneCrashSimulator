@@ -1,17 +1,13 @@
 ﻿using ChairControl.ChairWork;
 using ChairControl.ChairWork.Options;
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 
 public class SendMessage : MonoBehaviour
 {
     FutuRiftController controller;
-    float pitch = 0;
-    float roll = 0;
+    float _pitch = 0;
+    float _roll = 0;
     [SerializeField] PlaneController TU;
     [Space(10)]
     [Header("Connection settings")]
@@ -35,26 +31,30 @@ public class SendMessage : MonoBehaviour
     [Range(0.1f, 1f)] public float RollPerTickShake = 0.25f;
     [Range(0.1f, 1f)] public float PitchPerTickShake = 0.3f;
     [Range(0.01f, 0.1f)] public float ShakeInterval = 0.025f;
+    [Space(10)]
     [Header("Animated parts")]
     [SerializeField] GameObject LeftTurbine;
     [SerializeField] GameObject RightTurbine;
-    [SerializeField] GameObject RightBaggage;
-    [SerializeField] GameObject LeftBaggage;
+    [SerializeField] Animator RightBaggage;
+    [SerializeField] Animator LeftBaggage;
     [SerializeField] GameObject Tale;
     [SerializeField] GameObject LeftChairs;
     [SerializeField] GameObject LeftChair;
     [SerializeField] GameObject RightChair;
     [SerializeField] SoundController Sounds;
     [SerializeField] PartSpawner Spawner;
+    [Space(10)]
     [Header("Fire and Smoke")]
     [SerializeField] GameObject FireRight;
     [SerializeField] GameObject FireLeft;
     [SerializeField] GameObject SmokeRight;
     [SerializeField] GameObject SmokeLeft;
+    [Space(10)]
     [Header("Baggage")]
-    [SerializeField] GameObject OnChair;
-    [SerializeField] GameObject OnFloor;
-
+    [SerializeField] Animator OnChair;
+    [SerializeField] Animator OnFloor;
+    [SerializeField] Animator OnFrontChair;
+    [SerializeField] Animator OnFrontFloor;
 
     void Start()
     {
@@ -62,16 +62,16 @@ public class SendMessage : MonoBehaviour
         {
             controller = new FutuRiftController(UdpOpt)
             {
-                Pitch = pitch,
-                Roll = roll
+                Pitch = _pitch,
+                Roll = _roll
             };
         }
         else
         {
             controller = new FutuRiftController(new ComPortOptions { ComPort = Com })
             {
-                Pitch = pitch,
-                Roll = roll
+                Pitch = _pitch,
+                Roll = _roll
             };
         }
     }
@@ -98,9 +98,11 @@ public class SendMessage : MonoBehaviour
         StartCoroutine("Shake");
         Spawner.Spawn();
         yield return new WaitForSeconds(4f);
-        OnChair.GetComponent<Animator>().enabled = true;
+        OnChair.enabled = true;
         yield return new WaitForSeconds(2.5f);
-        OnFloor.GetComponent<Animator>().enabled = true;
+        OnFloor.enabled = true;
+        yield return new WaitForSeconds(2.3f);
+        OnFrontChair.enabled = true;
     }
 
     IEnumerator Pitch()
@@ -110,11 +112,11 @@ public class SendMessage : MonoBehaviour
         yield return new WaitForSeconds(ShakeTick);
         controller.Pitch = controller.Pitch + PitchShake;
         TU.LeanForwardNBack(controller.Pitch - PitchShake);
-        while (pitch < 21)
+        while (_pitch < 21)
         {
             controller.Pitch = controller.Pitch + PitchPerTick;
             TU.LeanForwardNBack(controller.Pitch - PitchShake);
-            pitch = controller.Pitch;
+            _pitch = controller.Pitch;
             yield return new WaitForSeconds(PitchTick);
         }
     }
@@ -122,17 +124,17 @@ public class SendMessage : MonoBehaviour
     IEnumerator Roll()
     {
         bool check = true;
-        while (roll < 18)
+        while (_roll < 18)
         {
             controller.Roll = controller.Roll + RollPerTick;
             TU.LeanRightNLeft(controller.Roll + RollPerTick);
-            roll = controller.Roll;
+            _roll = controller.Roll;
             yield return new WaitForSeconds(RollLeftTick);
         }
         StartCoroutine("Tourbine_R");
-        while (roll > -18)
+        while (_roll > -18)
         {
-            if (roll < 0 && check)
+            if (_roll < 0 && check)
             {
                 Tale.GetComponent<Animator>().enabled = true;
                 Tale.GetComponent<DestroyAfterSomeTime>().enabled = true;
@@ -143,12 +145,12 @@ public class SendMessage : MonoBehaviour
                 RightChair.GetComponent<DestroyAfterSomeTime>().enabled = true;
                 controller.Roll = controller.Roll - RollPerTick * 2;
                 TU.LeanRightNLeft(controller.Roll + RollPerTick * 2);
-                LeftBaggage.GetComponent<Animator>().enabled = true;
+                LeftBaggage.enabled = true;
                 check = false;
             }
             controller.Roll = controller.Roll - RollPerTick;
             TU.LeanRightNLeft(controller.Roll + RollPerTick);
-            roll = controller.Roll;
+            _roll = controller.Roll;
             yield return new WaitForSeconds(RollRightTick);
         }
     }
@@ -178,11 +180,12 @@ public class SendMessage : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         LeftTurbine.GetComponent<Animator>().enabled = true;
         LeftTurbine.GetComponent<DestroyAfterSomeTime>().enabled = true;
-        RightBaggage.GetComponent<Animator>().enabled = true;
+        RightBaggage.enabled = true;
     }
 
     IEnumerator Tourbine_R()
     {
+        OnFrontFloor.enabled = true;
         SmokeRight.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         FireRight.SetActive(true);
